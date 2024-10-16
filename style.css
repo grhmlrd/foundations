@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+	--primary-clr: #0369a1;
+}
+
+body {
+	font-family: "Playfair Display";
+}
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.main-header {
+	margin-top: 5vw;
+}
+
+.header__profile-image {
+	background: url("./assets/images/profile.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 400px;
+	position: relative;
+}
+
+.header__profile-image h1 {
+	position: absolute;
+	color: white;
+	font-size: 3rem;
+	bottom: 0;
+	margin-left: 1rem;
+}
+
+.profile-description h2 {
+	text-align: center;
+	font-size: 2rem;
+	margin-top: 1rem;
+	font-weight: 400;
+}
+
+.profile-description p {
+	color: #4b5563;
+	line-height: 1.7;
+}
+
+.social-media-links {
+	color: black;
+	text-align: center;
+	margin-top: 0.5rem;
+}
+
+.social-media-links a {
+	text-decoration: none;
+}
+
+.social-media-links a + a {
+	margin-left: 0.5rem;
+}
+
+.social-media-links a i {
+	color: black;
+	font-size: 1.3rem;
+}
+
+main {
+	margin-top: 3rem;
+}
+
+main .work-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 2rem;
+}
+
+main h2 {
+	text-align: center;
+	font-size: 2rem;
+	margin: 1rem 0;
+	font-weight: 400;
+}
+
+main article {
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+main article .work-details {
+	padding: 1rem;
+	padding-top: 0.5rem;
+}
+
+.work-details header {
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.5rem;
+}
+
+.work-details p {
+	color: #4b5563;
+}
+
+.work-details-icons {
+	margin-left: auto;
+	display: flex;
+	gap: 0.5rem;
+}
+
+.work-details-icons i {
+	font-size: 1.3rem;
+	color: black;
+}
+
+.view-icon {
+	width: 1.3rem;
+}
+
+footer {
+	margin-top: 3rem;
+	background: var(--primary-clr);
+	color: white;
+	padding: 2rem 0;
+}
+
+footer .information {
+	margin-bottom: 3rem;
+}
+
+footer h2 {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+address {
+	margin: 2rem 0;
+	font-style: normal;
+	white-space: normal;
+}
+
+.mb-md {
+	margin-bottom: 1.2rem;
+}
+
+footer nav {
+	text-align: center;
+}
+
+footer nav i {
+	color: black;
+	font-size: 1.5rem;
+}
+
+footer nav > a + a {
+	margin-left: 0.8rem;
+}
+
+.footer__profile-image {
+	background: url("./assets/images/profile.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 400px;
+	margin: 0 auto;
+}
