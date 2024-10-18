@@ -2,16 +2,25 @@
 
 :root {
 	--primary-clr: #0369a1;
+	--secondary-clr: #4b5563;
+	--font-main: "Playfair Display", serif;
+	--font-alt: "Roboto", sans-serif;
+	--base-padding: 1rem;
+	--base-margin: 1rem;
+	--font-size-h1: 3rem;
+	--font-size-h2: 2rem;
+	--font-size-text: 1rem;
+	--box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 body {
-	font-family: "Playfair Display";
+	font-family: var(--font-main);
 }
 
 * {
+	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	padding: 0;
 }
 
 img {
@@ -20,38 +29,49 @@ img {
 
 .container {
 	width: 90%;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 
 .main-header {
-	margin-top: 5vw;
+	padding: var(--base-padding) 0;
+	background-color: var(--primary-clr);
 }
 
-.header__profile-image {
-	background: url("./assets/images/profile.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: 400px;
+.profile-image {
 	position: relative;
+	box-shadow: var(--box-shadow);
+	margin-bottom: var(--base-margin);
 }
 
-.header__profile-image h1 {
+.profile-image img {
+	display: block;
+}
+
+.profile-image h1 {
 	position: absolute;
+	display: block;
 	color: white;
-	font-size: 3rem;
-	bottom: 0;
-	margin-left: 1rem;
+	font-size: var(--font-size-h1);
+	bottom: 1rem;
+	left: 1rem;
+}
+
+.profile-description {
+	background-color: white;
+	padding: var(--base-padding) 1.5rem;
+	box-shadow: var(--box-shadow);
 }
 
 .profile-description h2 {
 	text-align: center;
-	font-size: 2rem;
-	margin-top: 1rem;
+	font-size: var(--font-size-h2);
+	margin-top: var(--base-margin);
 	font-weight: 400;
 }
 
 .profile-description p {
-	color: #4b5563;
+	color: var(--secondary-clr);
 	line-height: 1.7;
 }
 
@@ -74,29 +94,30 @@ img {
 	font-size: 1.3rem;
 }
 
+/* Work Section */
 main {
 	margin-top: 3rem;
 }
 
 main .work-container {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	gap: 2rem;
 }
 
 main h2 {
 	text-align: center;
-	font-size: 2rem;
-	margin: 1rem 0;
+	font-size: var(--font-size-h2);
+	margin: var(--base-margin) 0;
 	font-weight: 400;
 }
 
 main article {
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	box-shadow: var(--box-shadow);
 }
 
 main article .work-details {
-	padding: 1rem;
+	padding: var(--base-padding);
 	padding-top: 0.5rem;
 }
 
@@ -107,7 +128,7 @@ main article .work-details {
 }
 
 .work-details p {
-	color: #4b5563;
+	color: var(--secondary-clr);
 }
 
 .work-details-icons {
@@ -125,6 +146,7 @@ main article .work-details {
 	width: 1.3rem;
 }
 
+/* Footer Section */
 footer {
 	margin-top: 3rem;
 	background: var(--primary-clr);
@@ -138,7 +160,7 @@ footer .information {
 
 footer h2 {
 	text-align: center;
-	font-size: 2rem;
+	font-size: var(--font-size-h2);
 	font-weight: 400;
 }
 
@@ -166,9 +188,91 @@ footer nav > a + a {
 }
 
 .footer__profile-image {
-	background: url("./assets/images/profile.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: 400px;
 	margin: 0 auto;
+}
+
+/* Media Queries */
+@media (min-width: 700px) {
+	.main-header {
+		padding-bottom: 2rem;
+		padding-top: 10rem;
+		padding-left: 5vw;
+	}
+
+	.profile-image {
+		width: 350px;
+		float: left;
+		margin-top: -7rem;
+		margin-left: -3rem;
+		margin-right: var(--base-margin);
+	}
+
+	.profile-image h1 {
+		top: 2rem;
+		right: -15rem;
+		text-align: right;
+	}
+
+	.social-media-links {
+		text-align: right;
+	}
+
+	footer .container {
+		display: flex;
+		justify-content: center;
+		align-items: stretch;
+		gap: 3rem;
+	}
+
+	footer .information h2 {
+		text-align: left;
+		margin-bottom: 1rem;
+	}
+
+	footer nav {
+		text-align: left;
+	}
+
+	.footer__profile-image {
+		margin: 0;
+		width: 25%;
+	}
+
+	.footer__profile-image img {
+		display: block;
+	}
+}
+
+@media (min-width: 900px) {
+	.main-header {
+		padding-top: 2rem;
+		padding-left: 0;
+	}
+
+	.profile-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.profile-image {
+		width: 400px;
+		margin: 0;
+	}
+
+	.profile-image h1 {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		text-align: center;
+		height: min-content;
+		margin-top: auto;
+	}
+
+	.profile-description p {
+		margin: 0 auto;
+		text-align: left;
+		max-width: 55ch;
+	}
 }
