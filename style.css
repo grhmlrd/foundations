@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Poppins, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.box {
+  /* border: 2px solid black; */
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.gameboard .container {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+  justify-content: center;
+  padding-block: 30px;
+  transform: scale(0.7);
+}
+
+.no-top {
+  border-top: none;
+}
+
+.no-bottom {
+  border-bottom: none;
+}
+
+.no-right {
+  border-right: none;
+}
+
+.no-left {
+  border-left: none;
+}
+
+.scoreboard .container {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  text-align: center;
+}
+
+#circle {
+  width: 70%;
+}
+
+#x {
+  width: 85%;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#circle path,
+#x path {
+  fill: #111;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it sits above other content */
+}
+
+.popup-text {
+  position: relative; /* Inside the flexbox parent */
+  width: 100%;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.popup-text h2 {
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.popup-text button {
+  all: unset;
+  border: 1px solid white;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+  border-radius: 100px;
+  font-weight: 500;
+}
+
+.hidden {
+  display: none;
+}
+h1 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#turn-section #circle,
+#turn-section #x {
+  display: block;
+  width: 1em;
+}
+
+#result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-weight: 200;
+}
+
+#result svg path {
+  fill: white;
+}
+
+#result svg {
+  display: block;
+  width: 1em;
+}
